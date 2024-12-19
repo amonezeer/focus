@@ -13,9 +13,9 @@ namespace Focus
         public MainWindow()
         {
             InitializeComponent();
+
             CommandBinding colorCommandBinding = new CommandBinding(ChangeColorCommand, ChangeColorExecuted);
             this.CommandBindings.Add(colorCommandBinding);
-
             KeyGesture keyGesture = new KeyGesture(Key.R, ModifierKeys.Control);
             InputBinding inputBinding = new InputBinding(ChangeColorCommand, keyGesture);
             this.InputBindings.Add(inputBinding);
